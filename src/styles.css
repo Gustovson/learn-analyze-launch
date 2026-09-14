@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Manrope", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,26 +64,26 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.375rem;
+  --background: oklch(0.165 0.052 256);
+  --foreground: oklch(0.965 0.01 250);
+  --card: oklch(0.205 0.055 256);
+  --card-foreground: oklch(0.965 0.01 250);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --primary: oklch(0.82 0.23 132);
+  --primary-foreground: oklch(0.16 0.045 256);
+  --secondary: oklch(0.195 0.054 256);
+  --secondary-foreground: oklch(0.965 0.01 250);
+  --muted: oklch(0.24 0.045 256);
+  --muted-foreground: oklch(0.72 0.025 252);
+  --accent: oklch(0.28 0.075 250);
+  --accent-foreground: oklch(0.965 0.01 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.34 0.045 253);
+  --input: oklch(0.34 0.045 253);
+  --ring: oklch(0.82 0.23 132);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +142,81 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+@utility nav-link {
+  color: var(--color-muted-foreground);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: color 180ms ease;
+  &:hover { color: var(--color-foreground); }
+}
+
+@utility section-kicker {
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@utility project-card {
+  animation: card-rise 650ms ease-out both;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color 220ms ease, transform 220ms ease;
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-primary) 65%, var(--color-border));
+    transform: translateY(-4px);
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--color-border) 32%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--color-border) 32%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, transparent 5%, black 35%, transparent 100%);
+}
+
+.pulse-dot {
+  background: var(--color-primary);
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-primary) 50%, transparent);
+  height: 0.55rem;
+  width: 0.55rem;
+  animation: pulse-ring 2s infinite;
+}
+
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-ring {
+  70% { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
