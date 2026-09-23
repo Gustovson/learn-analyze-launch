@@ -185,8 +185,8 @@ function Index() {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <article className="service-card p-6" key={service.title} style={{ animationDelay: `${index * 110}ms` }}>
-                <span className="grid size-11 place-items-center rounded-md bg-secondary text-xl" aria-hidden="true">
-                  {service.icon}
+                <span className="grid size-11 place-items-center rounded-md bg-secondary text-foreground" aria-hidden="true">
+                  <service.icon className="size-5" />
                 </span>
                 <h3 className="mt-5 font-display text-xl font-bold">{service.title}</h3>
                 <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{service.description}</p>
