@@ -195,6 +195,24 @@
   }
 }
 
+@utility service-card {
+  animation: card-rise 650ms ease-out both;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 8px 24px color-mix(in oklab, var(--color-brand) 8%, transparent);
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-brand) 65%, var(--color-border));
+    box-shadow: 0 14px 34px color-mix(in oklab, var(--color-brand) 15%, transparent);
+    transform: translateY(-4px);
+  }
+}
+
+
 .hero-grid {
   background-image:
     linear-gradient(color-mix(in oklab, var(--color-brand-foreground) 12%, transparent) 1px, transparent 1px),

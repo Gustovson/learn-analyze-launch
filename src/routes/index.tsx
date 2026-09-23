@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownRight, ArrowUpRight, Code2, Menu, Sparkles, X } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Code2, Link2, Menu, Palette, Rocket, Sparkles, X, Zap } from "lucide-react";
 import { useState } from "react";
 
 import launchProPreview from "@/assets/launchpro-preview.jpg";
@@ -38,6 +38,37 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "Motion", "Vite"],
     image: launchProPreview,
     alt: "Адаптивный продуктовый лендинг LaunchPro на компьютере и смартфоне",
+  },
+];
+
+const services = [
+  {
+    icon: Rocket,
+    title: "MVP за неделю",
+    description:
+      "Собираю минимальную версию продукта: ключевая функция, ясный интерфейс и готовность показывать пользователям. Без лишних месяцев разработки.",
+    result: "Рабочий продукт у первых пользователей уже через 5–7 дней.",
+  },
+  {
+    icon: Zap,
+    title: "AI-автоматизация",
+    description:
+      "Встраиваю AI в рутинные процессы — от обработки заявок до подготовки отчётов. Система делает скучную работу вместо команды.",
+    result: "Часы ручной рутины сокращаются до минут.",
+  },
+  {
+    icon: Palette,
+    title: "UI/UX с вайбкодингом",
+    description:
+      "Проектирую интерфейсы и сразу воплощаю их в живом коде — без разрыва между макетом и продуктом. Дизайн и разработка идут в одном ритме.",
+    result: "Аккуратный интерфейс, который нравится и конвертирует.",
+  },
+  {
+    icon: Link2,
+    title: "Интеграции",
+    description:
+      "Соединяю ваш продукт с платёжами, CRM, мессенджерами и внешними API. Данные текут между сервисами без ручного переноса.",
+    result: "Все сервисы работают как единое целое.",
   },
 ];
 
@@ -135,6 +166,35 @@ function Index() {
             <ul className="mt-4 space-y-3 font-display text-xl font-semibold">
               <li>AI-продукты</li><li>Веб-сервисы</li><li>Лендинги</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="border-b border-border bg-background py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div>
+              <p className="section-kicker">Формат работы</p>
+              <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Что я делаю</h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-muted-foreground sm:text-right">
+              Четыре направления, в которых AI и код работают на результат.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service, index) => (
+              <article className="service-card p-6" key={service.title} style={{ animationDelay: `${index * 110}ms` }}>
+                <span className="grid size-11 place-items-center rounded-md bg-secondary text-foreground" aria-hidden="true">
+                  <service.icon className="size-5" />
+                </span>
+                <h3 className="mt-5 font-display text-xl font-bold">{service.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{service.description}</p>
+                <p className="mt-6 border-t border-border pt-4 text-sm font-semibold leading-6 text-attention">
+                  {service.result}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
