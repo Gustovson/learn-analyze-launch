@@ -66,7 +66,7 @@ function Index() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
-      <header className="relative z-30 border-b border-border/70 bg-background/90 backdrop-blur-md">
+      <header className="relative z-30 border-b-[10px] border-brand bg-background/95 backdrop-blur-md">
         <div className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 sm:h-24 sm:px-8 lg:px-10">
           <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="На главную">
             <span className="grid size-10 shrink-0 place-items-center rounded-md bg-primary text-primary-foreground">
@@ -109,11 +109,11 @@ function Index() {
         )}
       </header>
 
-      <section id="top" className="relative border-b border-border/60">
+      <section id="top" className="relative border-b border-border/60 bg-brand text-brand-foreground">
         <div className="hero-grid absolute inset-0" aria-hidden="true" />
         <div className="relative mx-auto grid min-h-[630px] max-w-7xl items-end px-5 pb-16 pt-24 sm:px-8 sm:pb-20 lg:min-h-[720px] lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16 lg:px-10 lg:pb-24">
           <div className="max-w-5xl">
-            <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase text-primary">
+            <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase text-attention">
               <span className="pulse-dot" />
               Доступен для новых проектов
             </div>
@@ -121,7 +121,7 @@ function Index() {
               Создаю <span className="text-primary">цифровые</span><br />
               продукты с AI
             </h1>
-            <p className="mt-8 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+            <p className="mt-8 max-w-2xl text-base leading-7 text-brand-foreground/75 sm:text-lg sm:leading-8">
               Превращаю идеи в работающие сервисы и сайты — быстро, осмысленно и с вниманием к каждой детали.
             </p>
             <Button asChild size="lg" className="mt-9 h-12 px-6 text-sm">
@@ -129,9 +129,9 @@ function Index() {
             </Button>
           </div>
 
-          <div className="mt-16 hidden border-l border-border pl-8 lg:block">
-            <Sparkles className="mb-6 size-7 text-primary" aria-hidden="true" />
-            <p className="text-xs font-bold uppercase text-muted-foreground">Специализация</p>
+           <div className="mt-16 hidden border-l border-brand-foreground/25 pl-8 lg:block">
+             <Sparkles className="mb-6 size-7 text-attention" aria-hidden="true" />
+             <p className="text-xs font-bold uppercase text-brand-foreground/65">Специализация</p>
             <ul className="mt-4 space-y-3 font-display text-xl font-semibold">
               <li>AI-продукты</li><li>Веб-сервисы</li><li>Лендинги</li>
             </ul>
@@ -168,7 +168,7 @@ function Index() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <p className="text-[11px] font-bold uppercase text-primary">{project.category}</p>
+                   <p className="text-[11px] font-bold uppercase text-attention">{project.category}</p>
                   <h3 className="mt-2 font-display text-3xl font-bold">{project.title}</h3>
                   <p className="mt-4 flex-1 text-sm leading-6 text-muted-foreground">{project.description}</p>
                   <div className="mt-6 flex flex-wrap gap-2" aria-label={`Технологии проекта ${project.title}`}>
@@ -201,7 +201,7 @@ function Index() {
               ["03", "Запускаю", "Тестирую, полирую и передаю результат."],
             ].map(([step, title, text]) => (
               <div className="bg-card p-6" key={step}>
-                <span className="font-mono text-xs text-primary">{step}</span>
+                 <span className="font-mono text-xs font-bold text-attention">{step}</span>
                 <h3 className="mt-10 font-display text-xl font-bold">{title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
               </div>
@@ -210,10 +210,10 @@ function Index() {
         </div>
       </section>
 
-      <footer className="bg-foreground py-12 text-background">
+      <footer className="bg-brand py-12 text-brand-foreground">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 lg:px-10">
           <div>
-            <p className="text-xs font-bold uppercase text-primary">Есть идея?</p>
+            <p className="text-xs font-bold uppercase text-attention">Есть идея?</p>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Давайте запустим.</h2>
           </div>
           <Button asChild size="lg">
