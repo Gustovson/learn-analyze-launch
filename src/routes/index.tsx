@@ -137,8 +137,8 @@ function Index() {
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Основная навигация">
             <a className="nav-link" href="#projects">Проекты</a>
-            <a className="nav-link" href="#about">Обо мне</a>
             <Button asChild size="lg">
+
               <a href="mailto:hello@example.com">Обсудить проект <ArrowUpRight aria-hidden="true" /></a>
             </Button>
           </nav>
@@ -158,8 +158,8 @@ function Index() {
           <nav className="absolute inset-x-0 top-full border-b border-border bg-background px-5 py-5 md:hidden" aria-label="Мобильная навигация">
             <div className="mx-auto flex max-w-7xl flex-col gap-4">
               <a className="nav-link" href="#projects" onClick={() => setMenuOpen(false)}>Проекты</a>
-              <a className="nav-link" href="#about" onClick={() => setMenuOpen(false)}>Обо мне</a>
               <Button asChild className="mt-2 w-full">
+
                 <a href="mailto:hello@example.com">Обсудить проект <ArrowUpRight /></a>
               </Button>
             </div>
@@ -307,27 +307,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="about" className="border-y border-border bg-background py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
-          <div>
-            <p className="section-kicker">Подход</p>
-            <p className="mt-4 font-display text-3xl font-bold leading-tight sm:text-5xl">От замысла<br />до запуска.</p>
-          </div>
-          <div className="grid gap-px overflow-hidden rounded-md border border-border bg-border sm:grid-cols-3">
-            {[
-              ["01", "Разбираю", "Цели, аудиторию и продуктовую гипотезу."],
-              ["02", "Собираю", "Интерфейс, логику и AI-инструменты."],
-              ["03", "Запускаю", "Тестирую, полирую и передаю результат."],
-            ].map(([step, title, text]) => (
-              <div className="bg-card p-6" key={step}>
-                 <span className="font-mono text-xs font-bold text-attention">{step}</span>
-                <h3 className="mt-10 font-display text-xl font-bold">{title}</h3>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <footer className="bg-brand py-12 text-brand-foreground">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 lg:px-10">
