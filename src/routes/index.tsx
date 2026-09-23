@@ -170,6 +170,35 @@ function Index() {
         </div>
       </section>
 
+      <section id="services" className="border-b border-border bg-background py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div>
+              <p className="section-kicker">Формат работы</p>
+              <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Что я делаю</h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-muted-foreground sm:text-right">
+              Четыре направления, в которых AI и код работают на результат.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map((service, index) => (
+              <article className="service-card p-6" key={service.title} style={{ animationDelay: `${index * 110}ms` }}>
+                <span className="grid size-11 place-items-center rounded-md bg-secondary text-xl" aria-hidden="true">
+                  {service.icon}
+                </span>
+                <h3 className="mt-5 font-display text-xl font-bold">{service.title}</h3>
+                <p className="mt-3 flex-1 text-sm leading-6 text-muted-foreground">{service.description}</p>
+                <p className="mt-6 border-t border-border pt-4 text-sm font-semibold leading-6 text-attention">
+                  {service.result}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="projects" className="bg-secondary py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
