@@ -72,6 +72,33 @@ const services = [
   },
 ];
 
+const processSteps = [
+  {
+    number: "01",
+    title: "Погружаюсь в задачу",
+    description:
+      "Слушаю, задаю вопросы и фиксирую цель: что строим, для кого и по какому критерию считаем успех.",
+  },
+  {
+    number: "02",
+    title: "Создаю с ИИ",
+    description:
+      "Проектирую структуру и сразу пишу код вместе с AI-инструментами, показывая прогресс каждый день.",
+  },
+  {
+    number: "03",
+    title: "Тестирую и улучшаю",
+    description:
+      "Проверяю на реальных сценариях, собираю обратную связь и довожу детали до блеска.",
+  },
+  {
+    number: "04",
+    title: "Запускаю и масштабирую",
+    description:
+      "Выпускаю продукт в свет, подключаю аналитику и помогаю ему расти дальше.",
+  },
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -245,6 +272,38 @@ function Index() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="process" className="border-b border-border bg-secondary py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div>
+              <p className="section-kicker">Процесс</p>
+              <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Как я работаю</h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-muted-foreground sm:text-right">
+              Понятные этапы без сюрпризов — от первой встречи до запуска.
+            </p>
+          </div>
+
+          <ol className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            {processSteps.map((step, index) => (
+              <li className="relative pl-16 lg:pl-0 lg:pt-16" key={step.title}>
+                {index < processSteps.length - 1 && (
+                  <>
+                    <span className="absolute left-[19px] top-11 bottom-0 w-px bg-border lg:hidden" aria-hidden="true" />
+                    <span className="absolute left-10 top-[19px] hidden h-px w-[calc(100%-2.5rem)] bg-border lg:block" aria-hidden="true" />
+                  </>
+                )}
+                <span className="absolute left-0 top-0 grid size-10 place-items-center rounded-full bg-primary font-mono text-xs font-bold text-primary-foreground ring-[6px] ring-secondary">
+                  {step.number}
+                </span>
+                <h3 className="font-display text-xl font-bold">{step.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{step.description}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
