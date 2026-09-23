@@ -248,61 +248,6 @@ function Index() {
         </div>
       </section>
 
-      <section id="process" className="border-b border-border bg-secondary py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
-            <div>
-              <p className="section-kicker">Процесс</p>
-              <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Как я работаю</h2>
-            </div>
-            <p className="max-w-sm text-sm leading-6 text-muted-foreground sm:text-right">
-              Понятные этапы без сюрпризов — от первой встречи до запуска.
-            </p>
-          </div>
-
-          <ol className="relative grid gap-10 lg:grid-cols-4 lg:gap-8">
-            <span className="absolute bottom-4 left-[19px] top-4 w-px bg-border lg:hidden" aria-hidden="true" />
-            <span className="absolute left-0 right-0 top-[19px] hidden h-px bg-border lg:block" aria-hidden="true" />
-            {[
-              {
-                number: "01",
-                title: "Погружаюсь в задачу",
-                description: "Слушаю, задаю вопросы и фиксирую цель: что строим, для кого и по какому критерию считаем успех.",
-              },
-              {
-                number: "02",
-                title: "Создаю с ИИ",
-                description: "Проектирую структуру и сразу пишу код вместе с AI-инструментами, показывая прогресс каждый день.",
-              },
-              {
-                number: "03",
-                title: "Тестирую и улучшаю",
-                description: "Проверяю на реальных сценариях, собираю обратную связь и довожу детали до блеска.",
-              },
-              {
-                number: "04",
-                title: "Запускаю и масштабирую",
-                description: "Выпускаю продукт в свет, подключаю аналитику и помогаю ему расти дальше.",
-              },
-            ].map((step, index) => (
-              <li
-                className="relative flex items-start gap-4 lg:flex-col lg:gap-0"
-                key={step.number}
-                style={{ animationDelay: `${index * 110}ms` }}
-              >
-                <span className="relative z-10 grid size-10 shrink-0 place-items-center rounded-full bg-primary font-mono text-xs font-bold text-primary-foreground ring-[6px] ring-secondary">
-                  {step.number}
-                </span>
-                <div className="min-w-0 lg:mt-5">
-                  <h3 className="font-display text-lg font-bold sm:text-xl">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{step.description}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section id="about" className="border-y border-border bg-background py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
           <div>
