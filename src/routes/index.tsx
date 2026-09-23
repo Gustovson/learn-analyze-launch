@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDownRight, ArrowUpRight, Code2, Menu, Sparkles, X } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, Code2, Link2, Menu, Palette, Rocket, Sparkles, X, Zap } from "lucide-react";
 import { useState } from "react";
 
 import launchProPreview from "@/assets/launchpro-preview.jpg";
@@ -43,7 +43,7 @@ const projects = [
 
 const services = [
   {
-    icon: "🚀",
+    icon: Rocket,
     title: "MVP за неделю",
     description:
       "Собираю минимальную версию продукта: ключевая функция, ясный интерфейс и готовность показывать пользователям. Без лишних месяцев разработки.",
