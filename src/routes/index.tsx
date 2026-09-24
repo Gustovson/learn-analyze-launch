@@ -169,7 +169,7 @@ function Index() {
 
       <section id="top" className="relative border-b border-border/60 bg-brand text-brand-foreground">
         <div className="hero-grid absolute inset-0" aria-hidden="true" />
-        <div className="relative mx-auto grid min-h-[630px] max-w-7xl items-end px-5 pb-16 pt-24 sm:px-8 sm:pb-20 lg:min-h-[720px] lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16 lg:px-10 lg:pb-24">
+        <div className="relative mx-auto grid min-h-[630px] max-w-7xl items-end px-5 py-12 sm:px-8 lg:min-h-[720px] lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16 lg:px-10 lg:py-20">
           <div className="max-w-5xl">
             <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase text-attention">
               <span className="pulse-dot" />
@@ -197,7 +197,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="projects" className="bg-secondary py-20 sm:py-28">
+      <section id="projects" className="bg-secondary py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
@@ -246,7 +246,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="services" className="border-b border-border bg-background py-20 sm:py-28">
+      <section id="services" className="border-b border-border bg-background py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
@@ -275,7 +275,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="process" className="border-b border-border bg-secondary py-20 sm:py-28">
+      <section id="process" className="border-b border-border bg-secondary py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
@@ -307,7 +307,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="bg-brand py-12 text-brand-foreground">
+      <footer className="bg-brand py-12 text-brand-foreground lg:py-20">
 
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 lg:px-10">
           <div>
