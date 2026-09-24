@@ -307,39 +307,8 @@ function Index() {
         </div>
       </section>
 
-      <section id="contact" className="bg-background py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
-            <div>
-              <p className="section-kicker">Контакты</p>
-              <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Обсудим ваш проект?</h2>
-              <p className="mt-4 max-w-xl text-sm leading-6 text-muted-foreground sm:text-base sm:leading-7">
-                Напишите в мессенджер или на почту — отвечу в течение дня и предложу решение под вашу задачу.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <Button asChild size="lg" className="h-14 px-7 text-sm">
-                <a href="https://t.me/alekseyvetrov" target="_blank" rel="noopener noreferrer">
-                  <Send aria-hidden="true" /> Написать в Telegram
-                </a>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="h-14 border-brand bg-transparent px-7 text-sm text-brand hover:bg-brand/10 hover:text-brand"
-              >
-                <a href="mailto:hello@example.com">
-                  <Mail aria-hidden="true" /> Написать на Email
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       <footer className="bg-brand py-12 text-brand-foreground">
+
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 lg:px-10">
           <div>
             <p className="text-xs font-bold uppercase text-attention">Есть идея?</p>
