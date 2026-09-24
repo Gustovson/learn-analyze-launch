@@ -314,9 +314,24 @@ function Index() {
             <p className="text-xs font-bold uppercase text-attention">Есть идея?</p>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Давайте запустим.</h2>
           </div>
-          <Button asChild size="lg">
-            <a href="mailto:hello@example.com">Написать мне <ArrowUpRight /></a>
-          </Button>
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <Button asChild size="lg" className="h-14 px-7 text-sm">
+              <a href="https://t.me/alekseyvetrov" target="_blank" rel="noopener noreferrer">
+                <Send aria-hidden="true" /> Написать в Telegram
+              </a>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="h-14 border-brand-foreground/50 bg-transparent px-7 text-sm text-brand-foreground hover:bg-brand-foreground/15 hover:text-brand-foreground"
+            >
+              <a href="mailto:hello@example.com">
+                <Mail aria-hidden="true" /> Написать на Email
+              </a>
+            </Button>
+          </div>
+
         </div>
       </footer>
     </main>
