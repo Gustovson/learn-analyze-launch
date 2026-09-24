@@ -2,42 +2,42 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowUpRight, Code2, Link2, Menu, Palette, Rocket, Sparkles, X, Zap } from "lucide-react";
 import { useState } from "react";
 
-import launchProPreview from "@/assets/launchpro-preview.jpg";
-import neuroAnalyticsPreview from "@/assets/neuroanalytics-preview.jpg";
-import studyFlowPreview from "@/assets/studyflow-preview.jpg";
+import borodachPreview from "@/assets/borodach-preview.jpg";
+import emarketPreview from "@/assets/emarket-preview.jpg";
+import polyglotPreview from "@/assets/polyglot-preview.jpg";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
     number: "01",
-    title: "StudyFlow",
-    category: "EdTech / AI",
+    title: "Языковая школа «Полиглот»",
+    category: "EdTech / Web",
     description:
-      "AI-платформа, которая выстраивает персональный маршрут обучения и адаптирует материалы под темп каждого студента.",
+      "Платформа онлайн-школы: персональные курсы, расписание занятий и видеоуроки с преподавателями — всё в одном удобном интерфейсе.",
     technologies: ["React", "TypeScript", "OpenAI", "PostgreSQL"],
-    image: studyFlowPreview,
-    alt: "Интерфейс AI-платформы StudyFlow на ноутбуке и планшете",
+    image: polyglotPreview,
+    alt: "Интерфейс платформы языковой школы «Полиглот» с курсами и расписанием занятий",
   },
   {
     number: "02",
-    title: "НейроАналитик",
-    category: "Data / AI",
+    title: "Торговая площадка «Е-маркет»",
+    category: "Web / Marketplace",
     description:
-      "AI-сервис превращает массивы данных в понятные выводы, графики и готовые сценарии для принятия решений.",
-    technologies: ["Next.js", "Python", "AI Agents", "Recharts"],
-    image: neuroAnalyticsPreview,
-    alt: "Панель аналитики НейроАналитик с графиками и визуализацией данных",
+      "Электронная площадка для проведения торгов: лоты, ставки в реальном времени, история торгов и прозрачная аналитика по каждому тендеру.",
+    technologies: ["Next.js", "Node.js", "WebSockets", "PostgreSQL"],
+    image: emarketPreview,
+    alt: "Панель электронной торговой площадки «Е-маркет» со списком лотов и историей ставок",
   },
   {
     number: "03",
-    title: "LaunchPro",
-    category: "Web / Growth",
+    title: "Лендинг барбершопа «Бородач»",
+    category: "Web / Landing",
     description:
-      "Продуктовый лендинг с ясной структурой, выразительной подачей и фокусом на конверсию в целевое действие.",
+      "Лендинг барбершопа с онлайн-записью, прайсом и галереей работ — стильный сайт, который приводит клиентов из рекламы на запись.",
     technologies: ["React", "Tailwind CSS", "Motion", "Vite"],
-    image: launchProPreview,
-    alt: "Адаптивный продуктовый лендинг LaunchPro на компьютере и смартфоне",
+    image: borodachPreview,
+    alt: "Тёмный лендинг барбершопа «Бородач» с прайсом и кнопкой записи",
   },
 ];
 
