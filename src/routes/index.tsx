@@ -169,20 +169,20 @@ function Index() {
 
       <section id="top" className="relative border-b border-border/60 bg-brand text-brand-foreground">
         <div className="hero-grid absolute inset-0" aria-hidden="true" />
-        <div className="relative mx-auto grid min-h-[630px] max-w-7xl items-end px-5 py-12 sm:px-8 lg:min-h-[720px] lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-16 lg:px-10 lg:py-20">
-          <div className="max-w-5xl">
-            <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase text-attention">
+        <div className="relative mx-auto grid min-h-[560px] max-w-7xl items-center px-5 py-12 sm:px-8 lg:min-h-[620px] lg:grid-cols-[minmax(0,1fr)_250px] lg:gap-12 lg:px-10 lg:py-20">
+          <div className="max-w-4xl">
+            <div className="mb-6 flex items-center gap-3 text-xs font-bold uppercase text-attention">
               <span className="pulse-dot" />
               Доступен для новых проектов
             </div>
-            <h1 className="font-display text-[clamp(3.5rem,9vw,8.6rem)] font-bold leading-[0.86]">
+            <h1 className="font-display text-[clamp(3.5rem,8vw,7.5rem)] font-bold leading-[0.9]">
               Создаю <span className="text-primary">цифровые</span><br />
               продукты с AI
             </h1>
-            <p className="mt-8 max-w-2xl text-base leading-7 text-brand-foreground/75 sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-2xl text-base leading-7 text-brand-foreground/75 sm:text-lg sm:leading-8">
               Превращаю идеи в работающие сервисы и сайты — быстро, осмысленно и с вниманием к каждой детали.
             </p>
-            <Button asChild size="lg" className="mt-9 h-12 px-6 text-sm">
+            <Button asChild size="lg" className="mt-8 h-12 px-6 text-sm">
               <a href="#projects">Смотреть проекты <ArrowDownRight aria-hidden="true" /></a>
             </Button>
           </div>
@@ -199,7 +199,7 @@ function Index() {
 
       <section id="projects" className="bg-secondary py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
               <p className="section-kicker">Выборка / 2026</p>
               <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Избранные проекты</h2>
@@ -248,7 +248,7 @@ function Index() {
 
       <section id="services" className="border-b border-border bg-background py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <div className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
               <p className="section-kicker">Формат работы</p>
               <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Что я делаю</h2>
@@ -277,7 +277,7 @@ function Index() {
 
       <section id="process" className="border-b border-border bg-secondary py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mb-12 grid gap-5 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <div className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
               <p className="section-kicker">Процесс</p>
               <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Как я работаю</h2>
