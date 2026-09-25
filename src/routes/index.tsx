@@ -124,8 +124,9 @@ function Index() {
 
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const showAll = () => elements.forEach((element) => element.classList.add("is-visible"));
     if (typeof IntersectionObserver === "undefined") {
-      elements.forEach((element) => element.classList.add("is-visible"));
+      showAll();
       return;
     }
     const observer = new IntersectionObserver(
@@ -140,7 +141,21 @@ function Index() {
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
     );
     elements.forEach((element) => observer.observe(element));
-    return () => observer.disconnect();
+    // Подстраховка: если блок оказался выше зоны видимости (резкий переход,
+    // переход по якорю), показываем его без анимации.
+    const revealPassed = () => {
+      elements.forEach((element) => {
+        if (!element.classList.contains("is-visible") && element.getBoundingClientRect().bottom < 0) {
+          element.classList.add("is-visible");
+          observer.unobserve(element);
+        }
+      });
+    };
+    window.addEventListener("scroll", revealPassed, { passive: true });
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", revealPassed);
+    };
   }, []);
 
   return (
