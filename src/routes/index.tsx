@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDownRight, ArrowUpRight, Code2, Link2, Mail, Menu, Palette, Rocket, Send, Sparkles, X, Zap } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import borodachPreview from "@/assets/borodach-preview.jpg";
 import emarketPreview from "@/assets/emarket-preview.jpg";
@@ -121,6 +121,27 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    if (typeof IntersectionObserver === "undefined") {
+      elements.forEach((element) => element.classList.add("is-visible"));
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
