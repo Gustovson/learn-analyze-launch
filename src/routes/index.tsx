@@ -191,7 +191,7 @@ function Index() {
       <section id="top" className="relative border-b border-border/60 bg-brand text-brand-foreground">
         <div className="hero-grid absolute inset-0" aria-hidden="true" />
         <div className="relative mx-auto grid min-h-[560px] max-w-7xl items-center px-5 py-12 sm:px-8 lg:min-h-[620px] lg:grid-cols-[minmax(0,1fr)_250px] lg:gap-12 lg:px-10 lg:py-20">
-          <div className="max-w-4xl">
+          <div data-reveal className="max-w-4xl">
             <div className="mb-6 flex items-center gap-3 text-xs font-bold uppercase text-attention">
               <span className="pulse-dot" />
               Доступен для новых проектов
@@ -208,7 +208,7 @@ function Index() {
             </Button>
           </div>
 
-           <div className="mt-16 hidden border-l border-brand-foreground/25 pl-8 lg:block">
+           <div data-reveal style={{ transitionDelay: "150ms" }} className="mt-16 hidden border-l border-brand-foreground/25 pl-8 lg:block">
              <Sparkles className="mb-6 size-7 text-attention" aria-hidden="true" />
              <p className="text-xs font-bold uppercase text-brand-foreground/65">Специализация</p>
             <ul className="mt-4 space-y-3 font-display text-xl font-semibold">
@@ -220,7 +220,7 @@ function Index() {
 
       <section id="projects" className="bg-secondary py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-            <div className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+            <div data-reveal className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
               <p className="section-kicker">Выборка / 2026</p>
               <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Избранные проекты</h2>
@@ -230,7 +230,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <div data-reveal style={{ transitionDelay: "120ms" }} className="grid grid-cols-1 gap-5 lg:grid-cols-3">
             {projects.map((project, index) => (
               <article className="project-card group" key={project.title} style={{ animationDelay: `${index * 110}ms` }}>
                 <div className="relative aspect-[3/2] overflow-hidden border-b border-border bg-background">
@@ -269,7 +269,7 @@ function Index() {
 
       <section id="services" className="border-b border-border bg-background py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <div data-reveal className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
               <p className="section-kicker">Формат работы</p>
               <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Что я делаю</h2>
@@ -279,7 +279,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div data-reveal style={{ transitionDelay: "120ms" }} className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => (
               <article className="service-card p-6" key={service.title} style={{ animationDelay: `${index * 110}ms` }}>
                 <span className="grid size-11 place-items-center rounded-md bg-secondary text-foreground" aria-hidden="true">
@@ -298,7 +298,7 @@ function Index() {
 
       <section id="process" className="border-b border-border bg-secondary py-12 lg:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
+          <div data-reveal className="mb-10 grid gap-5 border-b border-border pb-6 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
             <div>
               <p className="section-kicker">Процесс</p>
               <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Как я работаю</h2>
@@ -308,7 +308,7 @@ function Index() {
             </p>
           </div>
 
-          <ol className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          <ol data-reveal style={{ transitionDelay: "120ms" }} className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             {processSteps.map((step, index) => (
               <li className="relative pl-16 lg:pl-0 lg:pt-16" key={step.title}>
                 {index < processSteps.length - 1 && (
@@ -330,7 +330,7 @@ function Index() {
 
       <footer className="bg-brand py-12 text-brand-foreground lg:py-20">
 
-        <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 lg:px-10">
+        <div data-reveal className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end sm:px-8 lg:px-10">
           <div>
             <p className="text-xs font-bold uppercase text-attention">Есть идея?</p>
             <h2 className="mt-3 font-display text-4xl font-bold sm:text-6xl">Давайте запустим.</h2>
